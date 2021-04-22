@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: everyonechurch-integTest
+test:
+  hosturl: http://localhost:22222/everyonechurch
+---
+spring:
+  profiles: dev
+test:
+  hosturl: http://localhost:22222/everyonechurch
+---
+spring:
+  profiles: staging
+test:
+  hosturl: http://localhost:22222/everyonechurch
+---

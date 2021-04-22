@@ -1,0 +1,11 @@
+<included>
+  <appender name="ASYNC_SLACK" class="ch.qos.logback.classic.AsyncAppender">
+    <appender-ref ref="SLACK"/>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>ERROR</level>
+    </filter>
+  </appender>
+
+  <logger name="org.apache.tomcat.jdbc.pool" level="ERROR"/>
+
+</included>

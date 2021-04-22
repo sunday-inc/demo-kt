@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProperty scope="context" name="CLOUD_CONFIG_URL" source="spring.cloud.config.uri" />
+    <include url="${CLOUD_CONFIG_URL}/application/default/master/logback-base.xml" />
+    <include resource="logback/slack-appender-dev.xml"/>
+
+    <root level="INFO">
+        <appender-ref ref="ASYNC-LOG-KAFKA"/>
+        <appender-ref ref="ASYNC_SLACK"/>
+    </root>
+</configuration>
